@@ -30,7 +30,9 @@
 }
 
 .portafolioTexto:hover{
+    transition: 0.5s;
     color: var(--mi-cyan);
+    font-size: 33px;
 }
 
 .headerMenu{
@@ -47,7 +49,9 @@
 }
 
 .menuTexto:hover{
+    transition: 0.5s;
     color: var(--mi-cyan);
+    font-size: 17px;
 }
 
 .main{
@@ -82,7 +86,7 @@
     color: var(--mi-cyan);
 }
 
-.segundaSeccion h3 span{
+.segundaSeccion h2 span{
     font-weight: 800;
     color: var(--mi-cyan);
 }
@@ -111,14 +115,17 @@
 }
 
 .bxl-linkedin:hover{
+    transition: 0.5s;
     color: #0A66C2;
 }
 
 .bxl-instagram:hover{
+    transition: 0.5s;
     color: #a24eda;
 }
 
 .bxl-whatsapp:hover{
+    transition: 0.5s;
     color: #25D366;
 }
 
@@ -130,11 +137,15 @@
 
 }
 
-.main img{
-    width: 550px;
+#fotoMia{
+    width: 500px;
     border-radius: 50%;
+    transition: box-shadow .5s, transform .1s;
     border: var(--mi-cyan) solid;
-    box-shadow: 0 10px 20px var(--mi-cyan);
+}
+
+#fotoMia:hover{
+    box-shadow: 0 0px 30px var(--mi-cyan);
 }
 
 .footer{
@@ -144,7 +155,11 @@
 
 .wrapper{
     display: flex;
+}
 
+.wrapper h2 {
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .primer-texto{
@@ -152,54 +167,86 @@
     color: #fff;
 }
 
-.wrapper .textos{
-    height: 90px;
-    line-height: 90px;
-    overflow: hidden;
+.parteDesarrollo{
+    width: 100%;
+    height: 110vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(var(--mi-gris), rgba(8, 8, 8, 0.5)), url("/img/desarrolladorWeb.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.textos li{
-    position: relative;
-    top: 0;
-    font-size: 60px;
-    color: var(--mi-cyan);
-    list-style: none;
-    padding: 0px 20px;
-    text-shadow: 0 0 10px var(--mi-cyan);
-    animation: slide 12s steps(3) infinite, colorful 6s infinite;
+.textoDesarrollo{
+    width: 40vw;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(8, 8, 8, 0.8);
+    border-radius: 10px;
 }
 
-@keyframes slide {
-    100% {
-        top: -270px;
-    }
+.parteDesarrollo h1{
+    color: white;
 }
 
-@keyframes colorful {
-    100% {
-        filter: hue-rotate(360deg);
-    }
+.textoDesarrollo p{
+    color: white;
+    padding-top: 20px;
 }
 
-.textos li span{
-    position: relative;
+.galeria{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.textos li span::before{
-    content: '';
-    position: absolute;
-    left: 0;
+.imgDiploma{
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(8, 8, 8, 0.8);
+}
+
+.imgDiploma:hover{
     width: 400px;
-    height: 87px;
-    background: var(--mi-gris);
-    border-left: 2px var(--mi-cyan) solid;
-    animation: typing 2s steps(13) infinite alternate;
+    transition: .5s;
+    border-radius: 10px;
 }
 
-@keyframes typing {
-    100% {
-        left: 100%;
-        margin: 0 -35px 0 35px;
-    }
+.mainProyectos{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(var(--mi-gris), rgba(8, 8, 8, 0.8)), url("/img/proyectos.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.mainProyectos h1{
+    color: white;
+    padding-bottom: 20px;
+}
+
+.btnGitHub{
+    font-size: 60px;
+    text-decoration: none;
+    color: var(--mi-gris);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.btnGitHub:hover{
+    transition: 0.5s;
+    font-size: 70px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--mi-gris);
+}
